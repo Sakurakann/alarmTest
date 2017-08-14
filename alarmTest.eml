@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component inheritJdk="true">
+	<output-test url="file://$MODULE_DIR$/target/test-classes"/>
+	<exclude-output/>
+	<contentEntry url="file://$MODULE_DIR$">
+		<testFolder url="file://$MODULE_DIR$/test"/>
+		<excludeFolder url="file://$MODULE_DIR$/target"/>
+	</contentEntry>
+	<contentEntry url="file://$MODULE_DIR$/target/classes"/>
+	<contentEntry url="file://$MODULE_DIR$/target/test-classes"/>
+	<lib name="lib" scope="COMPILE">
+		<relative-module-cls project-related="file://$PROJECT_DIR$/lib"/>
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/lib/poi.jar!/"/>
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/lib/oracle9i.jar!/"/>
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/lib/log4j-1.2.9.jar!/"/>
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/lib/commons-lang.jar!/"/>
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/lib/proxool-0.9.0.jar!/"/>
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/lib/commons-logging.jar!/"/>
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/lib/commons-lang-2.5.jar!/"/>
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/lib/backport-util-concurrent.jar!/"/>
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/lib/jeesoon-comm-framework3.03.jar!/"/>
+	</lib>
+</component>
