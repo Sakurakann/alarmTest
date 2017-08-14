@@ -10,15 +10,15 @@ import org.apache.log4j.Logger;
 public class AlarmPoints extends ITableVo<AlarmPoint> {
 	private static Logger log = Logger.getLogger(AlarmPoints.class);
 	private static AlarmPoints _intance= new AlarmPoints();
-	
+
 //	private List<AlarmPoint> points = new ArrayList<AlarmPoint>(10);
 	/**
 	 * key:告警编号_测试类型
 	 */
 	private Map<String,AlarmPoint> pointMap =new HashMap<String,AlarmPoint>(20);
-	
+
 	private AlarmPoints(){}
-	
+
 	public static AlarmPoints getIntance(){
 		return _intance;
 	}
@@ -34,9 +34,9 @@ public class AlarmPoints extends ITableVo<AlarmPoint> {
 		}
 		pointMap.put(point.getXlsNo()+"_"+point.getTestCode(), point);
 	}
-	
-	
-	
+
+
+
 	@Override
 	protected Collection<AlarmPoint> getSaveObject() {
 		return pointMap.values();
@@ -45,15 +45,15 @@ public class AlarmPoints extends ITableVo<AlarmPoint> {
 	public boolean containKey(String key){
 		return pointMap.containsKey(key);
 	}
-	
+
 	public AlarmPoint getPointById(String key){
 		return pointMap.get(key);
 	}
-	
+
 	public Collection<AlarmPoint> getAllPoints(){
 		return pointMap.values();
 	}
-	
+
 	public AlarmPoint createPoint(String pointStr) {
 		AlarmPoint point =null;
 		if(pointStr !=null && !"".equals(pointStr)){
@@ -71,7 +71,7 @@ public class AlarmPoints extends ITableVo<AlarmPoint> {
 		}
 		return point;
 	}
-	
+
 	public String[] clearTable() {
 		return new String[] { "truncate table z_alarmpoint","truncate table z_alarmpolicy" };
 	}
